@@ -2,7 +2,7 @@
 
 
 #include<windows.h>
-
+//entry point
 int CALLBACK
 WinMain(HINSTANCE hInstance,
 		HINSTANCE hPrevInstance,
