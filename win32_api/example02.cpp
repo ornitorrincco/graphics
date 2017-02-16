@@ -2,13 +2,12 @@
 //need the linker the librearies user32.lib and gdi32.lib
 #include<windows.h>
 
-
 //Is like it sounds!
 LRESULT CALLBACK 
 MainWindowCallback(HWND Window,
-					UINT Message,
-					WPARAM  WParam,
-					LPARAM LParam){
+		   UINT Message,
+		   WPARAM  WParam,
+		   LPARAM LParam){
 						
 	LRESULT Result = 0;
 	
@@ -51,18 +50,15 @@ MainWindowCallback(HWND Window,
 			Result = DefWindowProc(Window, Message, WParam, LParam);
 		}		break;
 	}
-
 	return(Result);
 }
-	
-	
+
 int CALLBACK
 WinMain(HINSTANCE Instance,
 		HINSTANCE PrevInstance,
 		LPSTR CommandLine,
  		int ShowCode){
-
-		
+	
 	//Window Class	
 	WNDCLASS WindowClass = {};
 	
@@ -74,41 +70,37 @@ WinMain(HINSTANCE Instance,
 	//WindowClass.hIcon ;
 	WindowClass.lpszClassName = "FinalFartClass";
 	
-	
 	if(RegisterClass(&WindowClass)){
 		HWND WindowHandle =
 			CreateWindowEx(
-							0,
-							WindowClass.lpszClassName,
-							"Final Fart",
-							WS_OVERLAPPEDWINDOW|WS_VISIBLE,
-							CW_USEDEFAULT,
-							CW_USEDEFAULT,
-							CW_USEDEFAULT,
-							CW_USEDEFAULT,
-							0,
-							0,
-							Instance,
-							0);
-		if(WindowHandle){
-			for(;;){
-				MSG Message;
-				BOOL MessageResult = GetMessage(&Message, 0, 0, 0);
-				if(MessageResult > 0){
-					TranslateMessage(&Message);
-					DispatchMessage(&Message);
-				}else{
-					break;
-				}			
-			}
-				
-		}else{
+					0,
+					WindowClass.lpszClassName,
+					"Final Fart",
+					WS_OVERLAPPEDWINDOW|WS_VISIBLE,
+					CW_USEDEFAULT,
+					CW_USEDEFAULT,
+					CW_USEDEFAULT,
+					CW_USEDEFAULT,
+					0,
+					0,
+					Instance,
+					0);
+	if(WindowHandle){
+		for(;;){
+			MSG Message;
+			BOOL MessageResult = GetMessage(&Message, 0, 0, 0);
+			if(MessageResult > 0){
+				TranslateMessage(&Message);
+				DispatchMessage(&Message);
+			}else{
+				break;
+			 }			
+		}		
+	}else{
 				//Logging
-		}
-
+     	}
 	}else{
 		//Logging
-	}
-	 
-	return (0);
+	} 
+return (0);
 }
