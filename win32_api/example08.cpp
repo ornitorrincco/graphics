@@ -1,4 +1,4 @@
-//TODO(ornitorrincco): s
+//TODO(ornitorrincco): s //ONLY USE WITH LOW LEVEL OF VOLUMEN
 //need the linker the librearies user32.lib and gdi32.lib
 #include<windows.h>
 #include<stdint.h>
