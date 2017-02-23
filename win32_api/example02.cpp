@@ -8,7 +8,7 @@ MainWindowCallback(HWND Window,
 		   UINT Message,
 		   WPARAM  WParam,
 		   LPARAM LParam){
-						
+	
 	LRESULT Result = 0;
 	
 	switch(Message){
