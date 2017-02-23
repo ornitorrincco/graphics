@@ -5,9 +5,9 @@
 //entry point
 int CALLBACK
 WinMain(HINSTANCE hInstance,
-		HINSTANCE hPrevInstance,
-		LPSTR lpCmdLine,
- 		int nCmdShow){
+	HINSTANCE hPrevInstance,
+	LPSTR lpCmdLine,
+	int nCmdShow){
 
 	MessageBoxA(0, "This is underated","Final Fart", 
 		MB_OK | MB_ICONINFORMATION);
