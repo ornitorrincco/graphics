@@ -1,15 +1,37 @@
-//TODO(ornitorrincco)update: added debug tools
+//TODO(ornitorrincco)update: 
 //need the linker the librearies user32.lib and gdi32.lib
+/*
+TODO(ornitorrincco): + already, - for do
+ 
+	+Create a entry point for windows(a window)
+	+Control and Translate Message from windows
+	+Buffer for render
+	+Buffer for sound
+	+Inputs (Keyboard and joystick commands controls)
+	+debug tools
+	
+	- Saved game locations
+	- Getting a handle to our own executable file
+	- Asset loading path
+	- Threading (launch a thread)
+	- Raw Input (support for multiple keyboards)
+	- Sleep/timebeginPeriod
+	- FullScreen support
+	- WM_SETCURSOR (control cursor visibility)
+	- QueryCancelAutoplay
+	- WM_ACTIVATEAPP(for when we are not the active application)
+	- Blit speed improvements (BitBlt)
+	- Hardware acceleration (OpenGL or Direct3D or BOTH)
+	- GetKeyboardLayout (for French keyboards, international WASD support)
+	
+	Just a partial List
+*/
 #include<windows.h>
 #include<stdint.h>
 #include<stdio.h>
 #include<xinput.h>
 #include<dsound.h>
-
-
 #include<math.h>
-
-
 
 #define internal static
 #define local_persist static
